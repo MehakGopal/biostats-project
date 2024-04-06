@@ -1,0 +1,55 @@
+body {
+    background-color: #001f3f; /* Darker blue */
+    color: white;
+    font-family: 'Comic', sans-serif; /* Bungee Spice font */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: #005fa3; /* Lighter blue */
+}
+
+button:hover {
+    background-color: #003366; /* Darker shade of blue on hover */
+}
+
+#topLeftButtonContainer {
+    position: fixed; /* Use fixed positioning to position it relative to the viewport */
+    top: 0;
+    left: 0;
+}
+
+#topLeftButton {
+    padding: 10px 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: #005fa3; /* Lighter blue */
+    /* color: white; */
+}
+
+#topLeftButton:hover {
+    background-color: #003366; /* Darker shade of blue on hover */
+}
+

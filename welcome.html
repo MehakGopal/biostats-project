@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome Page</title>
+<style>
+    body {
+        background-color: #001f3f; /* Darker blue */
+        color: white;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        overflow: hidden; /* Prevent scroll bars */
+    }
+
+    #welcome {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 36px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .stat-symbol {
+        position: absolute;
+        opacity: 0.5; /* Reduced opacity for a subtle effect */
+        font-size: 40px;
+        color: white; /* White color */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        border: 2px solid black; /* Black outline */
+        border-radius: 50%; /* Circle shape */
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        animation: float 8s infinite alternate, spin 15s linear infinite;
+    }
+
+    @keyframes float {
+        0% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(-30px);
+        }
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+</head>
+<body>
+<div id="welcome" onclick="gotopage1()">Welcome</div>
+<div class="stat-symbol" style="top: 10%; left: 10%;">∑</div>
+<div class="stat-symbol" style="top: 20%; left: 30%;">µ</div>
+<div class="stat-symbol" style="top: 40%; left: 50%;">σ</div>
+<div class="stat-symbol" style="top: 60%; left: 70%;">Δ</div>
+<div class="stat-symbol" style="top: 80%; left: 90%;">β</div>
+<div class="stat-symbol" style="bottom: 10%; left: 10%;">∑</div>
+<div class="stat-symbol" style="bottom: 20%; left: 30%;">µ</div>
+<div class="stat-symbol" style="bottom: 40%; left: 50%;">σ</div>
+<div class="stat-symbol" style="bottom: 60%; left: 70%;">Δ</div>
+<div class="stat-symbol" style="bottom: 80%; left: 90%;">β</div>
+<div class="stat-symbol" style="top: 10%; right: 10%;">∑</div>
+<div class="stat-symbol" style="top: 20%; right: 30%;">µ</div>
+<div class="stat-symbol" style="top: 40%; right: 50%;">σ</div>
+<div class="stat-symbol" style="top: 60%; right: 70%;">Δ</div>
+<div class="stat-symbol" style="top: 80%; right: 90%;">β</div>
+<!-- Add more symbols as needed -->
+<script>
+    window.onload = function() {
+        console.log(localStorage);
+        localStorage.clear();
+        console.log(localStorage);
+    };
+    // Function to get a random integer within a range
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    // Function to check collision between two elements
+    function isColliding(elem1, elem2) {
+        const rect1 = elem1.getBoundingClientRect();
+        const rect2 = elem2.getBoundingClientRect();
+        return !(rect1.right < rect2.left || 
+                 rect1.left > rect2.right || 
+                 rect1.bottom < rect2.top || 
+                 rect1.top > rect2.bottom);
+    }
+
+    // Function to move and check collision for each symbol
+    function moveAndCheckCollision() {
+        const symbols = document.querySelectorAll('.stat-symbol');
+        symbols.forEach((symbol, index) => {
+            // Move symbol
+            symbol.style.left = `${parseInt(symbol.style.left) + getRandomInt(-300, 300)}px`;
+            symbol.style.top = `${parseInt(symbol.style.top) + getRandomInt(-300,300)}px`;
+            // Check collision with other symbols
+            for (let i = 0; i < symbols.length; i++) {
+                if (i !== index && isColliding(symbol, symbols[i])) {
+                    // If collision detected, reverse direction
+                    symbol.style.left = `${parseInt(symbol.style.left) - getRandomInt(-300, 300)}px`;
+                    symbol.style.top = `${parseInt(symbol.style.top) - getRandomInt(-300, 300)}px`;
+                }
+            }
+        });
+    }
+    function gotopage1() {
+            // Redirect to page1.html
+            window.location.href = 'page1.html';
+        }
+    // Call moveAndCheckCollision every 100ms
+    setInterval(moveAndCheckCollision, 100);
+</script>
+</body>
+</html>

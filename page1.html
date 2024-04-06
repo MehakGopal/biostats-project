@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Questionnaire</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="topLeftButtonContainer">
+        <button id="topLeftButton" onclick="navigateToNewPage()">Chosen Options</button>
+    </div>
+    <div id="questionContainer">
+        <h2 id="question">The number of variables needed</h2>
+        <button  onclick="nextQuestion('one')">One</button>
+        <button onclick="nextQuestion('oneplus')">More than one</button>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <script>
+        window.onload = function() {
+        restoreQuestionContainerState();
+    };
+    </script>
+</body>
+</html>
