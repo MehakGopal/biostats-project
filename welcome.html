@@ -102,14 +102,14 @@
         const symbols = document.querySelectorAll('.stat-symbol');
         symbols.forEach((symbol, index) => {
             // Move symbol
-            symbol.style.left = `${parseInt(symbol.style.left) + getRandomInt(-300, 300)}px`;
-            symbol.style.top = `${parseInt(symbol.style.top) + getRandomInt(-300,300)}px`;
+            symbol.style.left = `${parseInt(symbol.style.left) + getRandomInt(-200, 200)}px`;
+            symbol.style.top = `${parseInt(symbol.style.top) + getRandomInt(-200,200)}px`;
             // Check collision with other symbols
             for (let i = 0; i < symbols.length; i++) {
                 if (i !== index && isColliding(symbol, symbols[i])) {
                     // If collision detected, reverse direction
-                    symbol.style.left = `${parseInt(symbol.style.left) - getRandomInt(-300, 300)}px`;
-                    symbol.style.top = `${parseInt(symbol.style.top) - getRandomInt(-300, 300)}px`;
+                    symbol.style.left = `${parseInt(symbol.style.left) - getRandomInt(-200, 200)}px`;
+                    symbol.style.top = `${parseInt(symbol.style.top) - getRandomInt(-200, 200)}px`;
                 }
             }
         });
