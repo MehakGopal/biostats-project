@@ -53,3 +53,14 @@ button:hover {
     background-color: #003366; /* Darker shade of blue on hover */
 }
 
+#back_button {
+    padding: 10px 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: #005fa3; /* Lighter blue */
+    /* color: white; */
+}
+
