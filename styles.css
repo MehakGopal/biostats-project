@@ -64,3 +64,132 @@ button:hover {
     /* color: white; */
 }
 
+.bobblehead-container-1 {
+    animation-name: bobblehead;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    left: 30px;
+    bottom: 30px;
+    position: absolute;
+    animation-duration: 0.8s;
+    transform-origin: center bottom; /* Changed from margin-bottom */
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    background-image: url('path/to/your/image.png'); /* Specify the path to your image */
+    background-size: cover; /* Adjust the size of the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+  }
+  
+  .bobblehead-container-1 {
+      animation-name: bobblehead;
+      border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    left: 60px; /* Keep it to align with the left edge */
+    bottom: 30px; /* Change top to bottom */
+    position: absolute;
+      animation-duration: 0.8s;
+      transform-origin:margin-bottom;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      background-image: url('elephant.png'); /* Specify the path to your image */
+    background-size: cover; /* Adjust the size of the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+  }
+  
+  .bobblehead-container-2 {
+      animation-name: bobblehead;
+      border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    left: 120px; /* Keep it to align with the left edge */
+    bottom: 30px; /* Change top to bottom */
+    position: absolute;
+      animation-duration: 0.8s;
+      transform-origin:margin-bottom;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      background-image: url('cat.png'); /* Specify the path to your image */
+    background-size: cover; /* Adjust the size of the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+  }
+  
+  .bobblehead-container-3 {
+      animation-name: bobblehead;
+      border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    left: 180px; /* Keep it to align with the left edge */
+    bottom: 30px; /* Change top to bottom */
+    position: absolute;
+      animation-duration: 0.8s;
+      transform-origin:margin-bottom;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      background-image: url('dog.png'); /* Specify the path to your image */
+    background-size: cover; /* Adjust the size of the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+  }
+  
+  .bobblehead-container-4 {
+      animation-name: bobblehead;
+      border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    left: 240px; /* Keep it to align with the left edge */
+    bottom: 30px; /* Change top to bottom */
+    position: absolute;
+      animation-duration: 0.8s;
+      transform-origin:margin-bottom;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      background-image: url('cat.png'); /* Specify the path to your image */
+    background-size: cover; /* Adjust the size of the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+  }
+  
+  @keyframes bobblehead {
+      0% { transform: translate(2px, 1px) rotate(0deg); }
+      50% { transform: translate(-1px, -2px) rotate(-4deg); }
+      100% { transform: translate(1px, 2px) rotate(4deg); }
+  }
+  
+  .speech-bubble {
+    font-size: 18px;
+    background: #fff;
+    width: 155px;
+    padding: 10px;
+    position: absolute; /* Set speech bubble as absolute positioning */
+    top: -80px; /* Adjust top position to position it above the bobblehead */
+    left: 50%; /* Position the speech bubble in the center horizontally */
+    transform: translateX(-50%); /* Adjust for center alignment */
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 2px 2px;
+    border-radius: 10px;
+}
+
+.speech-bubble::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: calc(50% - 10px); /* Adjust arrow position to center horizontally */
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent #FFF #FFF transparent;
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 2px 2px;
+    transform: rotate(45deg);
+}
+  .speech-bubble-icon {
+    float: left;
+    margin: 10px 0px 0px 10px;
+  }
+  
+  .speech-bubble-text {
+    color: black;
+    margin: 5px;
+    font-size: 8px;
+  }
+  
+  .speech-bubble-text-line {
+    line-height: 12px;
+  }
