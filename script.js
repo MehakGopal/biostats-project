@@ -1,5 +1,36 @@
 var questionAnswers = [];
-var facts = [['Hypothesis Testing refers to an objective method of making decisions or inferences from sample data.'],['Parametric tests are used for data that show a normal distribution'],['Parametric tests are used for data that are independent of one another'],['Parametric tests are used for data that are on the same continous scale of measurement.'],['The prevalence of a disease is the probability of currently having the disease regardless of the duration of time one has had the disease'],['The cumulative incidence of a disease is the probability that a person with no prior disease will develop a new case of the disease over some specified time period.']]
+var facts = [
+  ['Hypothesis Testing refers to an objective method of making decisions or inferences from sample data.'],
+  ['Parametric tests are used for data that show a normal distribution'],
+  ['Parametric tests are used for data that are independent of one another'],
+  ['Parametric tests are used for data that are on the same continuous scale of measurement'],
+  ['The prevalence of a disease is the probability of currently having the disease regardless of the duration of time one has had the disease'],
+  ['The cumulative incidence of a disease is the probability that a person with no prior disease will develop a new case of the disease over some specified time period'],
+  ['The number of variables needed in statistical analysis varies; some analysis require only one variable, while others require more than one'],
+  ['Understanding the relationships between variables is crucial in statistical analysis to determine the patterns, make predictions, and draw meaningful conclusions from data'],
+  ['Survival analysis is typically used in statistical analysis when analyzing time-to-event data, such as in medical studies'],
+  ['One-sample tests are used in statistical analysis to compare sample data to a known value, such as a population mean or proportion'],
+  ['Two-sample tests compare the means or proportions of two independent groups in statistical analysis'],
+  ['The log-rank test is a non-parametric test used in statistical analysis to compare survival curves, particularly in survival analysis studies'],
+  ['Parametric survival methods are used in statistical analysis when it is assumed that survival times follow a specific distribution'],
+  ['Cox proportional hazards regression is commonly used in statistical analysis, particularly survival analysis, to assess the relationship between survival time and predictor variables while accounting for censoring'],
+  ['Logistic regression is employed in statistical analysis when the outcome variable is binary, such as in predicting the likelihood of an event occurring or not'],
+  ['Pearson correlation measures the strength and direction of the linear relationship between two continuous variables in statistical analysis'],
+  ['Rank correlation is used in statistical analysis when the data is ordinal, measuring the strength and direction of the association between variables without assuming a linear relationship'],
+  ['ANOVA, or Analysis of Variance, is used in statistical analysis to compare means across multiple groups, determining whether there are statistically significant differences between them'],
+  ['The Kruskal-Wallis test is employed in statistical analysis as a non-parametric alternative to one-way ANOVA when the assumptions of ANOVA are not met, or the data is not normally distributed'],
+  ['Two-way ANCOVA is used in statistical analysis when there are two categorical independent variables and one continuous dependent variable, allowing for the examination of their combined effects while controlling for covariates'],
+  ['Higher-way ANCOVA is used in statistical analysis for more complex designs with multiple independent variables, allowing for examining their combined effects while controlling for covariates'],
+  ['Contingency table methods are used in statistical analysis to analyze the association between categorical variables, particularly in studies examining frequencies or proportions within different categories'],
+  ['The Kappa statistic is used in statistical analysis to measure the agreement between two observers or methods, particularly when categorical data is involved'],
+  ['One-sample z-test or t-test are employed in statistical analysis for hypothesis testing with one sample, comparing sample data to a known value, such as a population mean or proportion'],
+  ['Normal-theory methods are used in statistical analysis when the sample size is sufficiently large and the data is approximately normally distributed, allowing for parametric tests such as t-tests and ANOVA'],
+  ["McNemar's Test is primarily used in statistical analysis to compare paired proportions or frequencies from dependent samples, often in before-and-after studies or when dealing with matched pairs"],
+  ["Fisher's Exact Test is preferred over chi-square tests in statistical analysis when dealing with small sample sizes or when the expected cell frequencies in a contingency table are less than 5"],
+  ['Stratified person-time data methods are chosen in statistical analysis when there is a need to control for confounding variables or to analyze time-to-event data while accounting for differences in exposure or risk factors between strata'],
+  ['The Mantel-Haenszel method is primarily used in statistical analysis to assess the association between two categorical variables while controlling for the effects of other variables, particularly in stratified or matched studies']
+];
+
 var bob = ["bobblehead-container-1","bobblehead-container-2","bobblehead-container-3","bobblehead-container-4"]
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
