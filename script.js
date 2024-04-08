@@ -77,6 +77,7 @@ function getTextOfButton(buttonId) {
   }
 }
 
+var prev_container;
 function nextQuestion(option) {
   var question = document.getElementById('question');
   var questionContainer = document.getElementById('questionContainer');
@@ -84,6 +85,11 @@ function nextQuestion(option) {
   var answer = getTextOfButton(option); // Get the text of the button
   questionAnswers.push({ question: currentQuestion, answer: answer });
   console.log(questionAnswers);
+  prev_container = {
+    question: currentQuestion,
+    containerHTML: questionContainer.innerHTML
+  };
+  console.log(prev_container);
   var bob_id = getRandomInt(0,bob.length-1);
   var fact = getRandomInt(0,facts.length-1);
   switch (option) {
@@ -535,8 +541,30 @@ function nextQuestion(option) {
           questionContainer.innerHTML = '';
           break;
   }
+
   localStorage.setItem('questionContainerState', questionContainer.innerHTML);
   localStorage.setItem('questionAnswers', JSON.stringify(questionAnswers));
+}
+
+
+function previousState(){
+    if (prev_container) {
+      var question = document.getElementById('question');
+      var questionContainer = document.getElementById('questionContainer');
+  
+      // Restore previous container state
+      question.innerText = prev_container.question;
+      questionContainer.innerHTML = prev_container.containerHTML;
+  
+      // Remove the last question from the answers array
+      questionAnswers.pop();
+  
+      // Update local storage
+      localStorage.setItem('questionContainerState', questionContainer.innerHTML);
+      localStorage.setItem('questionAnswers', JSON.stringify(questionAnswers));
+    } else {
+      console.log("No previous state to go back to.");
+    }
 }
 
 function displayTextAndConfetti(text,time) {
