@@ -95,7 +95,7 @@ button:hover {
       border-radius: 50%;
     width: 50px;
     height: 50px;
-    left: 60px; /* Keep it to align with the left edge */
+    left: 200px; /* Keep it to align with the left edge */
     bottom: 30px; /* Change top to bottom */
     position: absolute;
       animation-duration: 0.8s;
@@ -112,7 +112,7 @@ button:hover {
       border-radius: 50%;
     width: 50px;
     height: 50px;
-    left: 120px; /* Keep it to align with the left edge */
+    left: 260px; /* Keep it to align with the left edge */
     bottom: 30px; /* Change top to bottom */
     position: absolute;
       animation-duration: 0.8s;
@@ -129,7 +129,7 @@ button:hover {
       border-radius: 50%;
     width: 50px;
     height: 50px;
-    left: 180px; /* Keep it to align with the left edge */
+    left: 320px; /* Keep it to align with the left edge */
     bottom: 30px; /* Change top to bottom */
     position: absolute;
       animation-duration: 0.8s;
@@ -146,7 +146,7 @@ button:hover {
       border-radius: 50%;
     width: 50px;
     height: 50px;
-    left: 240px; /* Keep it to align with the left edge */
+    left: 380px; /* Keep it to align with the left edge */
     bottom: 30px; /* Change top to bottom */
     position: absolute;
       animation-duration: 0.8s;
@@ -167,11 +167,11 @@ button:hover {
   .speech-bubble {
     font-size: 18px;
     background: #fff;
-    width: 155px;
-    padding: 10px;
+    width: 400px; /* Adjust the width of the speech bubble */
+    padding: 5px; /* Adjust the padding of the speech bubble */
     position: absolute; /* Set speech bubble as absolute positioning */
     top: -80px; /* Adjust top position to position it above the bobblehead */
-    left: 50%; /* Position the speech bubble in the center horizontally */
+    left: 10%; /* Position the speech bubble in the center horizontally */
     transform: translateX(-50%); /* Adjust for center alignment */
     box-shadow: rgba(0, 0, 0, 0.3) 2px 2px 2px;
     border-radius: 10px;
@@ -190,13 +190,13 @@ button:hover {
 }
   .speech-bubble-icon {
     float: left;
-    margin: 10px 0px 0px 10px;
+    margin: 40px 0px 0px 10px;
   }
   
   .speech-bubble-text {
     color: black;
     margin: 5px;
-    font-size: 8px;
+    font-size: 12px;
   }
   
   .speech-bubble-text-line {
