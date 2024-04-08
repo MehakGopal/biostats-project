@@ -119,7 +119,7 @@ button:hover {
       transform-origin:margin-bottom;
       animation-iteration-count: infinite;
       animation-timing-function: linear;
-      background-image: url('cat.png'); /* Specify the path to your image */
+      background-image: url('kangaroo.png'); /* Specify the path to your image */
     background-size: cover; /* Adjust the size of the background image */
     background-repeat: no-repeat; /* Prevent the image from repeating */
   }
