@@ -76,9 +76,10 @@ function getTextOfButton(buttonId) {
     return 'More than one';
   }
 }
-
+var flag = false;
 var prev_container;
 function nextQuestion(option) {
+  flag = false;
   var question = document.getElementById('question');
   var questionContainer = document.getElementById('questionContainer');
   var currentQuestion = question.innerText;
@@ -133,14 +134,17 @@ function nextQuestion(option) {
       case 'yes20':
         displayTextAndConfetti("One Sample Z test",1000);
         questionContainer.innerHTML = '';
+flag = true;
         break;
       case 'no20':
         displayTextAndConfetti("One Sample t test",1000);
         questionContainer.innerHTML = '';
+flag = true;
         break;
       case 'no19':
         displayTextAndConfetti("One sample Chi square Test for variances",1000);
         questionContainer.innerHTML = '';
+flag = true;
         break;
       case 'no18':
         questionContainer.innerHTML = `
@@ -160,6 +164,7 @@ function nextQuestion(option) {
       case 'yes22':
         displayTextAndConfetti("Normal Theory Methods",1000);
         questionContainer.innerHTML = '';
+flag = true;
         break;
       case 'no22':
         displayTextAndConfetti("Exact Methods",1000);
@@ -468,6 +473,7 @@ function nextQuestion(option) {
       case 'conti':
         displayTextAndConfetti("Multiple Regression Methods!",400)
         questionContainer.innerHTML = '';
+flag = true;
         break;
       case 'binary':
         questionContainer.innerHTML = `
@@ -479,6 +485,7 @@ function nextQuestion(option) {
         case 'no3':
           displayTextAndConfetti("Multiple Logistic Regression Methods!",400)
           questionContainer.innerHTML = '';
+flag = true;
           break;
         case 'yes3':
           displayTextAndConfetti("Survival Analysis",250)
@@ -491,6 +498,7 @@ function nextQuestion(option) {
         case 'yes4':
           displayTextAndConfetti("One sample-test for Incidence rates",400)
           questionContainer.innerHTML = '';
+flag = true;
           break;
         case 'no4':
           questionContainer.innerHTML = `
@@ -516,6 +524,7 @@ function nextQuestion(option) {
         case 'yes7':
           displayTextAndConfetti("Log Rank Test",800);
           questionContainer.innerHTML = '';
+flag = true;
           break;
         case 'no7':
           questionContainer.innerHTML = `
@@ -531,14 +540,17 @@ function nextQuestion(option) {
         case 'no8':
           displayTextAndConfetti("Use Cox proportional hazards regression",800);
           questionContainer.innerHTML = '';
+flag = true;
           break;
         case 'yes6':
           displayTextAndConfetti("Two-sample test for comparison of incidence rates, if no confounding is present;or methods for stratified person-time data, if confounding is present",1000)
           questionContainer.innerHTML = '';
+flag = true;
           break;
         case 'no6':
           displayTextAndConfetti("Use Test of trend for incidence rates",800);
           questionContainer.innerHTML = '';
+flag = true;
           break;
   }
 
@@ -559,7 +571,9 @@ function previousState(){
   
       // Remove the last question from the answers array
       questionAnswers.pop();
-  
+      if(flag){
+        questionAnswers.pop();
+      }
       // Update local storage
       localStorage.setItem('questionContainerState', questionContainer.innerHTML);
       localStorage.setItem('questionAnswers', JSON.stringify(questionAnswers));
