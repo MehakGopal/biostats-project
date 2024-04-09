@@ -169,6 +169,7 @@ flag = true;
       case 'no22':
         displayTextAndConfetti("Exact Methods",1000);
         questionContainer.innerHTML='';
+flag = true;
         break;
       case 'no21':
         questionContainer.innerHTML = `
@@ -180,10 +181,12 @@ flag = true;
       case 'yes23':
         displayTextAndConfetti("One Sample Poisson Test",1000);
         questionContainer.innerHTML='';
+flag = true;
         break;
       case 'no23':
         displayTextAndConfetti("Use another Underlying distribution or use non parametric methods",1000);
         questionContainer.innerHTML='';
+flag = true;
         break;
       case '2s':
         questionContainer.innerHTML = `
@@ -216,18 +219,22 @@ flag = true;
       case 'yes27':
         displayTextAndConfetti("Use two sample t-test with unequal variances",1000);
         questionContainer.innerHTML='';
+flag = true;
         break;
       case 'no27':
         displayTextAndConfetti("Use two sample t-test with equal variances",1000);
         questionContainer.innerHTML='';
+flag = true;
         break;
       case 'no26':
         displayTextAndConfetti("Use Paired t-test",1000);
         questionContainer.innerHTML='';
+flag = true;
         break;
       case 'no25':
         displayTextAndConfetti("Inference concerning Variance: Two sample F-test",1000)
         questionContainer.innerHTML='';
+flag = true;
         break;
       case 'no24':
         questionContainer.innerHTML = `
@@ -267,6 +274,7 @@ flag = true;
       case 'no33':
         displayTextAndConfetti("Use Chi-Square test for RxC tables",1000);
         questionContainer.innerHTML='';
+flag = true;
         break;
       case 'yes33':
         questionContainer.innerHTML = `
@@ -278,22 +286,27 @@ flag = true;
       case 'yes34':
         displayTextAndConfetti("Use chi-square test for trend, if no confounding is present; or the Mantel-Haenszel method, if confounding is present",1000);
         questionContainer.innerHTML='';
+flag = true;
         break;
       case 'no34':
         displayTextAndConfetti("Use chi-square test for heterogeneity  2xk contingency table",1000);
         questionContainer.innerHTML='';
+flag = true;
         break;
       case 'yes32':
         displayTextAndConfetti("Use two-sample test for binomial proportins, or 2X2 contingency table methods if no confounding is present, or the Mantel-Haenszel method if confounding is present",1000);
         questionContainer.innerHTML='';
+flag = true;
         break;
       case 'no30':
         displayTextAndConfetti("Fisher's Exact test",1000);
         questionContainer.innerHTML='';
+flag = true;
         break;
       case 'no29':
         displayTextAndConfetti("McNemar's Test",1000);
         questionContainer.innerHTML='';
+flag = true;
         break;
       case 'no28':
         questionContainer.innerHTML = `
@@ -305,6 +318,7 @@ flag = true;
       case 'no31':
         displayTextAndConfetti("Use another underlying distribution or use non-parametric methods",1000);
         questionContainer.innerHTML='';
+flag = true;
         break;
       case '2pluss':
         questionContainer.innerHTML = `
@@ -316,6 +330,7 @@ flag = true;
       case 'yes35':
         displayTextAndConfetti("One way ANOVA",1000);
         questionContainer.innerHTML='';
+flag = true;
         break;
       case 'no35':
         questionContainer.innerHTML = `
@@ -327,10 +342,12 @@ flag = true;
       case 'yes36':
         displayTextAndConfetti("Use RxC contingency table methods",1000);
         questionContainer.innerHTML='';
+flag = true;
         break;
       case 'no36':
         displayTextAndConfetti("Use another underlying distribution or non-parametric methods such as Kruskal Wallis",1000);
         questionContainer.innerHTML='';
+flag = true;
         break;
       case 'yes1':
         questionContainer.innerHTML = `
@@ -349,6 +366,7 @@ flag = true;
       case 'yes10':
         displayTextAndConfetti("Simple Linear Regression",1000);
         questionContainer.innerHTML='';
+flag = true;
         break;
       case 'no10':
         questionContainer.innerHTML = `
@@ -360,6 +378,7 @@ flag = true;
       case 'yes11':
         displayTextAndConfetti("Pearson Correlation Methods",1000);
         questionContainer.innerHTML='';
+flag = true;
         break;
       case 'no11':
         displayTextAndConfetti("Rank Correlation Methods",1000);
@@ -398,14 +417,17 @@ flag = true;
       case 'yes14':
         displayTextAndConfetti("One Way ANCOVA",1000);
         questionContainer.innerHTML='';
+flag = true;
         break;
       case 'no14':
         displayTextAndConfetti("One Way ANOVA",1000);
         questionContainer.innerHTML='';
+flag = true;
         break;
       case 'no13':
         displayTextAndConfetti("Non Parametric ANOVA: Kruskal Wallis",1000);
         questionContainer.innerHTML='';
+flag = true;
         break;
       case '2':
         questionContainer.innerHTML = `
@@ -417,10 +439,12 @@ flag = true;
       case 'yes15':
         displayTextAndConfetti("Two Way ANCOVA",1000);
         questionContainer.innerHTML='';
+flag = true;
         break;
       case 'no15':
         displayTextAndConfetti("Two Way ANOVA",1000);
         questionContainer.innerHTML='';
+flag = true;
         break;
       case '2plus':
         questionContainer.innerHTML = `
@@ -432,10 +456,12 @@ flag = true;
       case 'yes16':
         displayTextAndConfetti("Higher Way ANCOVA",1000);
         questionContainer.innerHTML='';
+flag = true;
         break;
       case 'no16':
         displayTextAndConfetti("Higher Way ANOVA",1000);
         questionContainer.innerHTML='';
+flag = true;
         break;
       case 'no12':
         questionContainer.innerHTML = `
@@ -447,6 +473,7 @@ flag = true;
       case 'yes17':
         displayTextAndConfetti("Rank-Correlation Methods",1000);
         questionContainer.innerHTML='';
+flag = true;
         break;
       case 'no17':
         questionContainer.innerHTML = `
@@ -462,6 +489,7 @@ flag = true;
       case 'repro':
         displayTextAndConfetti("Use Kappa Statistic",1000);
         questionContainer.innerHTML='';
+flag = true;
         break;
       case 'no1':                
       questionContainer.innerHTML = `
@@ -658,6 +686,7 @@ function clear(){
   for(var i = 0;i<bob.length;i++){
     var parentDiv = document.getElementById(bob[i]);
     parentDiv.innerHTML='';
+flag = true;
   }
 }
 function addSpeechBubble(parentId,text) {
