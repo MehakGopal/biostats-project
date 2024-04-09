@@ -86,7 +86,7 @@ function nextQuestion(option) {
   questionAnswers.push({ question: currentQuestion, answer: answer });
   console.log(questionAnswers);
   prev_container = {
-    question: currentQuestion,
+    // question: currentQuestion,
     containerHTML: questionContainer.innerHTML
   };
   console.log(prev_container);
@@ -548,12 +548,13 @@ function nextQuestion(option) {
 
 
 function previousState(){
+  console.log(prev_container);
     if (prev_container) {
       var question = document.getElementById('question');
       var questionContainer = document.getElementById('questionContainer');
   
       // Restore previous container state
-      question.innerText = prev_container.question;
+      // question.innerText = prev_container.question;
       questionContainer.innerHTML = prev_container.containerHTML;
   
       // Remove the last question from the answers array
@@ -577,11 +578,12 @@ function displayTextAndConfetti(text,time) {
   textDiv.style.left = '50%';
   textDiv.style.transform = 'translate(-50%, -50%)';
   textDiv.style.zIndex = '1000';
-  textDiv.style.backgroundColor = 'rgba(255, 255, 255, 0.8)';
+  textDiv.style.backgroundColor = 'rgba(255, 255, 255, 1)';
   textDiv.style.padding = '20px';
   textDiv.style.borderRadius = '10px';
   textDiv.style.textAlign = 'center';
   textDiv.style.fontWeight = 'bold';
+  textDiv.style.color = 'black';
 
   // Append the div to the body
   document.body.appendChild(textDiv);
